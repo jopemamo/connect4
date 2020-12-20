@@ -1,3 +1,9 @@
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  background-color: lemonchiffon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.column {
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disc {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lemonchiffon;
+  width: 100%;
+  height: 100%;
+}
+.board {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.Player1 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.Player2 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgb(114, 37, 7);
+}
+
+.message {
+  color: black;
+  border: 1px solid yellow;
+}
+
+button {
+  height: 50px;
+  width: 40%;
+  margin-top: 3%;
+  border: 1px solid black;
 }
