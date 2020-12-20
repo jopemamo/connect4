@@ -81,24 +81,17 @@ const App = () => {
     }
   }
 
-  const horizontalWin = (column, cellIndex) => {
-    let count = 0;
-    for (let i = 3; i < column.length; i++) {
-      if (column[i][cellIndex].played !== 'disc') {
-        for (let j = 0; j < column.length; j++) {
-          if (count === 4) {
-            count = 0;
-            setMessage(`${column[i][cellIndex].played} is the winner`);
+  const horizontalWin = (boardArr, cellIndex) => {
+    for (let i = 0; i < board.columns - 3; i++) {
+      if (boardArr[i][cellIndex].played !== 'disc') {
+          if (boardArr[i][cellIndex].played === boardArr[i + 1][cellIndex].played &&
+            boardArr[i][cellIndex].played === boardArr[i + 2][cellIndex].played &&
+            boardArr[i][cellIndex].played === boardArr[i + 3][cellIndex].played
+            ) {
+            setMessage(`${boardArr[i][cellIndex].played} is the winner`);
             break;
           }
-          if (column[i][cellIndex].played === column[j][cellIndex].played) {
-            count++;
-          } else {
-            count = 0;
-          }
-        }
       }
-      count = 0;
     }
   }
 
