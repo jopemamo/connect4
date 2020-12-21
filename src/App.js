@@ -67,7 +67,6 @@ const App = () => {
       if (column[i].played !== 'disc') {
         for (let j = i - 3; j < column.length; j++) {
           if (count === 4) {
-            count = 0;
             setMessage(`${column[i].played} is the winner`);
             break;
           }
@@ -140,7 +139,6 @@ const App = () => {
       setMessage(`Draw, there is no the winner`);
     }
   }
-
 
   const reset = () => {
     setBoard({
